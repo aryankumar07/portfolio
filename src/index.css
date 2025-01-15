@@ -6,18 +6,20 @@
 
 
 body {
-  background: var(--background);
+    background: var(--background);
 }
 
 .light {
-  --foreground: #0F0F0F;
-  --background: #FEFBF6;
-  --primary: #121212;
+    --foreground: #0F0F0F;
+    --background: #FEFBF6;
+    --primary: #121212;
+    --secondary: #191f22;
 }
 
 
 .dark {
-  --background: #060505;
-  --foreground: #FEFBF6;
-  --primary: #131618;
+    --background: #060505;
+    --foreground: #FEFBF6;
+    --primary: #131618;
+    --secondary: #191f22;
 }

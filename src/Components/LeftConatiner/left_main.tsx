@@ -1,15 +1,13 @@
+import InfoCard from "../../commons/infoCard";
 import { Profiletags } from "../../constants";
 
 const LeftMain = () => {
-  console.log(Profiletags)
   return (
-    <div>
+    <div className="mt-2">
       {
         Profiletags.map((tag) => {
           return (
-            <div>
-              {tag.title}
-            </div>
+            <InfoCard key={tag.id} tag={tag} />
           )
         })
       }
