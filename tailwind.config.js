@@ -11,7 +11,8 @@ export default {
                 foreground: "var(--foreground)",
                 primary: "var(--primary)",
                 secondary: "var(--secondary)",
-                highlight: "var(--highlight)"
+                highlight: "var(--highlight)",
+                greyish: "var(--greyish)",
             },
             fontFamily: {
                 outfit: ["Outfit", "serif"]

@@ -2,7 +2,7 @@ import { SocialHandles } from "../../constants";
 
 const LeftFooter = () => {
     return (
-        <div className="flex flex-row gap-3 mt-3">
+        <div className="flex flex-row gap-3 mt-10">
             {
                 SocialHandles.map((handle) => {
                     return (
