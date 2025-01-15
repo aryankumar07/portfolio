@@ -8,7 +8,7 @@ interface IconsTagProp {
 const IconsTag: React.FC<IconsTagProp> = ({ icontag: Icon }) => {
     return (
         <div className="p-3 bg-primary rounded-xl shadow-1xl">
-            <Icon className="text-yellow-400" />
+            <Icon className="text-highlight" size={16} />
         </div>
     );
 };

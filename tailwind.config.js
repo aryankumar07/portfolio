@@ -10,13 +10,14 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: "var(--primary)",
-                secondary: "var(--secondary)"
+                secondary: "var(--secondary)",
+                highlight: "var(--highlight)"
             },
             fontFamily: {
                 outfit: ["Outfit", "serif"]
             },
             boxShadow: {
-                "1xl": 'rgb(204, 219, 232) 3px 3px 6px -4px inset'
+                "1xl": 'rgb(204, 219, 232) 1px 1px 6px -5px inset'
             },
 
         },

@@ -50,3 +50,8 @@ export const SocialHandles = [
     }
 ]
 
+export const headers = ["About", "Resume", "Projects", "Blog", "Contact"]
+
+
+
+

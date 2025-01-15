@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 
-
 body {
     background: var(--background);
 }
@@ -14,12 +13,14 @@ body {
     --background: #FEFBF6;
     --primary: #121212;
     --secondary: #191f22;
+    --highlight: #ffdb70
 }
 
 
 .dark {
-    --background: #060505;
+    --background: #000000;
     --foreground: #FEFBF6;
-    --primary: #131618;
+    --primary: #1E1E1F;
     --secondary: #191f22;
+    --highlight: #ffdb70
 }
