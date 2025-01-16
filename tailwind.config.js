@@ -13,6 +13,7 @@ export default {
         secondary: "var(--secondary)",
         highlight: "var(--highlight)",
         greyish: "var(--greyish)",
+        "greyish-transparent": "var(--greyish-transparent)",
       },
       fontFamily: {
         outfit: ["Outfit", "serif"]

@@ -5,24 +5,26 @@
 
 
 body {
-    background: var(--background);
+  background: var(--background);
 }
 
 .light {
-    --foreground: #0F0F0F;
-    --background: #000000;
-    --primary: #1E1E1F;
-    --secondary: #191f22;
-    --highlight: #ffdb70;
-    --greyish: #2B2B2C;
+  --foreground: #0F0F0F;
+  --background: #000000;
+  --primary: #1E1E1F;
+  --secondary: #191f22;
+  --highlight: #ffdb70;
+  --greyish: #2B2B2C;
+  --greyish-transparent: rgba(43, 43, 44, 0.1);
 }
 
 
 .dark {
-    --background: #000000;
-    --foreground: #d6d6d6;
-    --primary: #1E1E1F;
-    --secondary: #191f22;
-    --highlight: #ffdb70;
-    --greyish: #2B2B2C;
+  --background: #000000;
+  --foreground: #d6d6d6;
+  --primary: #1E1E1F;
+  --secondary: #191f22;
+  --highlight: #ffdb70;
+  --greyish: #2B2B2C;
+  --greyish-transparent: rgba(43, 43, 44, 0.9);
 }

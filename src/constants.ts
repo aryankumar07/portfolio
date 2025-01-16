@@ -71,7 +71,7 @@ export const CardsDetail: CardDetail[] = [
         id: "978798",
         icon: TabletSmartphone,
         heading: "Mobile Apps",
-        description: "Professional Development of Application for Both iOS and Cross Platform",
+        description: "Professional Development for Both iOS and Cross Platform",
     },
     {
         id: "57656",

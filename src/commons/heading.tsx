@@ -11,7 +11,7 @@ const Heading: React.FC<HeadingProps> = ({
   value,
   color = 'text-foreground',
   size = "text-xl",
-  font = 'font- bold font-outfit',
+  font = 'font-bold font-outfit',
   customClass = "",
 }) => {
   return <div className={cn(`${color} ${size} ${font}`, customClass)}>
