@@ -18,7 +18,7 @@ const InfoCard: React.FC<InfoCardProp> = ({ tag }) => {
               tag.title
             }
           </div>
-          <div className="text-foreground text-sm font-outfit">
+          <div className="text-foreground text-sm font-outfit cursor-pointer">
             {
               tag.content
             }

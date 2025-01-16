@@ -20,7 +20,7 @@ body {
 
 .dark {
     --background: #000000;
-    --foreground: #FEFBF6;
+    --foreground: #d6d6d6;
     --primary: #1E1E1F;
     --secondary: #191f22;
     --highlight: #ffdb70;

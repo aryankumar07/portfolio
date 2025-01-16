@@ -1,10 +1,18 @@
-import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon } from 'lucide-react'
+import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
 
 export default interface ProfileTag {
     id: string
     icon: LucideIcon,
     title: string,
     content: string,
+}
+
+
+export interface CardDetail {
+    id: string,
+    icon: LucideIcon,
+    heading: string,
+    description: string,
 }
 
 
@@ -52,6 +60,31 @@ export const SocialHandles = [
 
 export const headers = ["About Me", "Resume", "Projects", "Blog"]
 
-
+export const CardsDetail: CardDetail[] = [
+    {
+        id: "1241414",
+        icon: Code,
+        heading: "Web Development",
+        description: "High Quality Full Stacl Sites Coded at Professional Level",
+    },
+    {
+        id: "978798",
+        icon: TabletSmartphone,
+        heading: "Mobile Apps",
+        description: "Professional Development of Application for Both iOS and Cross Platform",
+    },
+    {
+        id: "57656",
+        icon: BrainCog,
+        heading: "Problem Solver",
+        description: "Efficient in Problem Solving Skills and Building C++ builds",
+    },
+    {
+        id: "10014",
+        icon: Gamepad,
+        heading: "Gamer At Night",
+        description: "Love To Mend that elden Ring",
+    },
+]
 
 

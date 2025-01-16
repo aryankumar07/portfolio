@@ -3,7 +3,7 @@ import { Profiletags } from "../../constants";
 
 const LeftMain = () => {
     return (
-        <div className="mt-5">
+        <div className="grid grid-cols-2 justify-center lg:grid-cols-1 lg:justify-start lg:grid-flow-row">
             {
                 Profiletags.map((tag) => {
                     return (

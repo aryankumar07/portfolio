@@ -13,7 +13,7 @@ const Line = ({ color = "#ccc", width = "100%", height = "3px" }: LineProps) => 
                 height,
                 width,
             }}
-            className="rounded-md"
+            className="rounded-md hidden lg:block"
         />
     );
 };
