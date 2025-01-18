@@ -1,10 +1,16 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
 
-export default interface ProfileTag {
-    id: string
+export interface ProfileTag {
+    id: string,
     icon: LucideIcon,
     title: string,
     content: string,
+}
+
+export interface gameCard {
+    name: string,
+    image: string,
+    quote: string
 }
 
 
@@ -87,4 +93,25 @@ export const CardsDetail: CardDetail[] = [
     },
 ]
 
-
+export const Facts: gameCard[] = [
+    {
+        name: "Kratos",
+        image: "/kratos.png",
+        quote: "Death Can Have Me When It Earns Me"
+    },
+    {
+        name: "Max Payne",
+        image: "/maxpayne.png",
+        quote: "Nothing is a cliché when it's happening to you"
+    },
+    {
+        name: "John Marston",
+        image: "/john.png",
+        quote: "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair"
+    },
+    {
+        name: "Maleina",
+        image: "/malenia.png",
+        quote: "You Will Witness True Horror",
+    }
+]

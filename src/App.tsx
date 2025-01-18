@@ -4,7 +4,7 @@ import RightContainer from "./Components/RightContainer/RightBody"
 function App() {
 
   return (
-    <div className='flex flex-col lg:flex-row gap-2 mt-11 mr-24 ml-24 h-[150vh] '>
+    <div className='flex flex-col lg:flex-row gap-2 mt-11 md:mr-24 md:ml-24 hi[150vh] '>
       <div className="basis-1/4">
         <LeftConatiner />
       </div>

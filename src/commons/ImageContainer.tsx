@@ -1,13 +1,22 @@
-const ImageContainer = () => {
-  return (
-    <div className="w-40 h-40 bg-blend-darken rounded-3xl overflow-hidden shadow-md">
-      <img
-        src="/image_header.jpg"
-        alt="Placeholder"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  );
+import React from "react";
+
+interface ImageContainerprops {
+    src: string,
+    width?: string,
+    height?: string,
+    background?: string,
+}
+
+const ImageContainer: React.FC<ImageContainerprops> = ({ src, width = "w-40", height = "h-40", background = "bg-[#373738]" }) => {
+    return (
+        <div className={`${width} ${height} ${background}  rounded-3xl overflow-hidden shadow-md`}>
+            <img
+                src={src}
+                alt="Placeholder"
+                className="w-full h-full object-fill"
+            />
+        </div>
+    );
 };
 
 export default ImageContainer;

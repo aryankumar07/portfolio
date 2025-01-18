@@ -1,5 +1,5 @@
 import React from "react"
-import ProfileTag from "../constants"
+import { ProfileTag } from "../constants"
 import IconsTag from "./Iconstag"
 
 interface InfoCardProp {
