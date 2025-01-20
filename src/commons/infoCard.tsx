@@ -10,7 +10,7 @@ interface InfoCardProp {
 const InfoCard: React.FC<InfoCardProp> = ({ tag }) => {
   return (
     <div className="p-2 mb-1 mt-1 w-auto">
-      <div className="flex flex-row gap-10 justify-start items-center">
+      <div className="flex flex-row gap-1 md:gap-10 justify-start items-center">
         <IconsTag icontag={tag.icon} />
         <div className="flex flex-col">
           <div className="text-gray-500 text-sm font-outfit">
@@ -18,7 +18,7 @@ const InfoCard: React.FC<InfoCardProp> = ({ tag }) => {
               tag.title
             }
           </div>
-          <div className="text-foreground text-sm font-outfit cursor-pointer">
+          <div className="text-foreground text-[5px] sm:text-sm font-outfit cursor-pointer">
             {
               tag.content
             }

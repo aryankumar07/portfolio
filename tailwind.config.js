@@ -26,6 +26,12 @@ export default {
                 thumb: '#ffdb70',
                 track: '#ffffff',
             },
+            animation: {
+
+            },
+            keyframes: {
+
+            }
         },
     },
     plugins: [

@@ -9,6 +9,7 @@ export interface ProfileTag {
 
 export interface gameCard {
     name: string,
+    game: string,
     image: string,
     quote: string
 }
@@ -27,7 +28,7 @@ export const Profiletags: ProfileTag[] = [
         id: "123131",
         icon: MailCheck,
         title: "EMAIL",
-        content: "dummy@gmail.com"
+        content: "aryan.pageme"
     },
     {
         id: " 354634643",
@@ -45,7 +46,7 @@ export const Profiletags: ProfileTag[] = [
         id: "234411",
         icon: MapPinHouse,
         title: "LOCATION",
-        content: "https://localhost:3000"
+        content: "Ludhiana"
     }
 ]
 
@@ -95,23 +96,30 @@ export const CardsDetail: CardDetail[] = [
 
 export const Facts: gameCard[] = [
     {
+        name: "John Marston",
+        game: "Red Dead Redemption 2",
+        image: "/john.png",
+        quote: "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair"
+    },
+    {
         name: "Kratos",
+        game: "GOD OF WAR",
         image: "/kratos.png",
         quote: "Death Can Have Me When It Earns Me"
     },
     {
         name: "Max Payne",
+        game: "Max Payne",
         image: "/maxpayne.png",
         quote: "Nothing is a cliché when it's happening to you"
     },
-    {
-        name: "John Marston",
-        image: "/john.png",
-        quote: "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair"
-    },
+
     {
         name: "Maleina",
+        game: "Elden Ring",
         image: "/malenia.png",
         quote: "You Will Witness True Horror",
     }
 ]
+
+

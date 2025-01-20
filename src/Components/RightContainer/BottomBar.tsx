@@ -8,7 +8,7 @@ interface BottomBarProps {
 
 const BottomBar: React.FC<BottomBarProps> = ({ isActive, setIsActive }) => {
   return (
-    <div className="flex justify-center items-center fixed w-[100vw] bg-greyish-transparent text-foreground h-[70px] bottom-0 left-0 backdrop-blur-sm rounded-t-3xl">
+    <div className="flex justify-center min-w-[320px] items-center fixed w-[100vw] bg-greyish-transparent text-foreground h-[70px] bottom-0 left-0 backdrop-blur-sm rounded-t-3xl">
       <div className="flex flex-row gap-5 md:gap-10">
         {
           headers.map((head, index) => {

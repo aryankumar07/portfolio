@@ -19,7 +19,7 @@ const RightContainer = () => {
     const header: string = headers[isActive];
 
     return (
-        <div className="m-3 border border-[#383838]  bg-primary rounded-3xl lg:h-[150vh] h-auto xl:max-w-[85%] ">
+        <div className="m-3 mb-20 border border-[#383838]  bg-primary rounded-3xl lg:h-[150vh] xl:max-w-[85%]">
             {
                 size === "large" ?
                     <RightHeader head={header} isActive={isActive} setIsActive={setIsActive} /> : <BottomBar isActive={isActive} setIsActive={setIsActive} />
@@ -33,7 +33,7 @@ const RightContainer = () => {
                     : null
             }
             <div>
-                {isActive === 0 && AboutMeBody}
+                {isActive === 0 && <AboutMeBody />}
                 {isActive === 1 && ResumeBody}
                 {isActive === 2 && ProjectBody}
                 {isActive === 3 && BlogBody}
