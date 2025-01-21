@@ -14,6 +14,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ isActive, setIsActive }) => {
                     headers.map((head, index) => {
                         return (
                             <div
+                                key={head}
                                 onClick={() => setIsActive(index)}
                                 className={`md:text-lg text-sm font-thin font-outfit ${index === isActive ? 'text-highlight' : 'text-foreground'} `}>
                                 {head}

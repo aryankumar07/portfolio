@@ -22,6 +22,17 @@ export interface CardDetail {
     description: string,
 }
 
+export interface Project {
+    title: string,
+    category: string,
+    images: string[],
+    description: string,
+    date: string,
+    techstack: string[],
+    github: string,
+    live: string,
+}
+
 
 export const Profiletags: ProfileTag[] = [
     {
@@ -122,4 +133,15 @@ export const Facts: gameCard[] = [
     }
 ]
 
-
+export const Projects: Project[] = [
+    {
+        title: "Genius",
+        category: "Web Development",
+        images: ['/genius_1.png', '/genius_2.png', '/genius_3.png'],
+        description: "Genius Ten is an innovative SaaS platform that uses OpenAI and Replicate APIs to provide powerful tools for code generation, conversational AI, image creation, and video production, catering to developers, content creators, and businesses. With features designed to streamline workflows and enhance productivity, users can generate high-quality code, engage with an AI-powered chat assistant, create stunning visuals, and produce professional-grade videos effortlessly. The platform integrates Stripe for secure payment processing, offering premium features and priority access to advanced AI resources for paid subscribers, making Genius Ten the ultimate solution for creative and technical needs.",
+        date: "October 2024",
+        techstack: ["NextJs", "OPenAi", "ReactJS", "Postgress", "Prisma", "ShadcnUI"],
+        github: "https://github.com/aryankumar07/genius",
+        live: "https://genius-ten-navy.vercel.app",
+    }
+]
