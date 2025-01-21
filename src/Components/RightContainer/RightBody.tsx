@@ -12,34 +12,34 @@ import Line from "../../commons/line";
 
 const RightContainer = () => {
 
-    const [isActive, setIsActive] = useState(0);
+  const [isActive, setIsActive] = useState(0);
 
-    const size = UseScreenSize();
+  const size = UseScreenSize();
 
-    const header: string = headers[isActive];
+  const header: string = headers[isActive];
 
-    return (
-        <div className="m-3 mb-20 border border-[#383838]  bg-primary rounded-3xl lg:h-[150vh] xl:max-w-[85%]">
-            {
-                size === "large" ?
-                    <RightHeader head={header} isActive={isActive} setIsActive={setIsActive} /> : <BottomBar isActive={isActive} setIsActive={setIsActive} />
-            }
-            {
-                size !== "large" ?
-                    <div className="p-2">
-                        <Heading value={header} size="text-5xl" />
-                        <Line color="#ffdb70" width="15%" height="5px" className="mt-3" />
-                    </div>
-                    : null
-            }
-            <div>
-                {isActive === 0 && <AboutMeBody />}
-                {isActive === 1 && ResumeBody}
-                {isActive === 2 && ProjectBody}
-                {isActive === 3 && BlogBody}
-            </div>
-        </div>
-    )
+  return (
+    <div className="m-3 mb-20 border border-[#383838]  bg-primary rounded-3xl lg:h-[150vh] xl:max-w-[85%] overflow-x-hidden">
+      {
+        size === "large" ?
+          <RightHeader head={header} isActive={isActive} setIsActive={setIsActive} /> : <BottomBar isActive={isActive} setIsActive={setIsActive} />
+      }
+      {
+        size !== "large" ?
+          <div className="p-2">
+            <Heading value={header} size="text-5xl" />
+            <Line color="#ffdb70" width="15%" height="5px" className="mt-3" />
+          </div>
+          : null
+      }
+      <div>
+        {isActive === 0 && <AboutMeBody />}
+        {isActive === 1 && ResumeBody}
+        {isActive === 2 && ProjectBody}
+        {isActive === 3 && BlogBody}
+      </div>
+    </div>
+  )
 }
 
 export default RightContainer;

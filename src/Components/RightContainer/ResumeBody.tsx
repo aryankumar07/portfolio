@@ -2,12 +2,12 @@ import { BiLogoFlutter, BiLogoJavascript, BiLogoMongodb, BiLogoTypescript } from
 import Heading from "../../commons/heading";
 import IconsTag from "../../commons/Iconstag";
 import { Dot, BookOpen } from "lucide-react"
-import { SiDart, SiExpress, SiNodedotjs, SiPrisma } from "react-icons/si";
+import { SiDart, SiExpress, SiLua, SiNeovim, SiNodedotjs, SiPrisma, SiXcode } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandCpp } from "react-icons/tb";
 
 const ResumeBody = (
-  <div className="p-5">
+  <div className="p-5 overflow-x-hidden">
     <div className="mt-6 lg:w-full">
       <div className="flex flex-row justify-start items-center gap-6 p-3">
         <IconsTag icontag={BookOpen} />
@@ -50,23 +50,48 @@ const ResumeBody = (
     </div>
 
 
-    <Heading value="My Skills" size="text-3xl" customClass="mt-8" />
+    <Heading value="My Skills" size="text-3xl" customClass="mt-8 mb-8" />
 
-    <div className="flex flex-row flex-wrap gap-16 text-slate-600 mt-8">
-      <BiLogoJavascript size={90} className="hover:text-highlight" />
-      <BiLogoTypescript size={90} className="hover:text-highlight" />
-      <SiExpress size={90} className="hover:text-highlight" />
-      <SiNodedotjs size={90} className="hover:text-highlight" />
-      <RiTailwindCssFill size={90} className="hover:text-highlight" />
-      <BiLogoMongodb size={90} className="hover:text-highlight" />
-      <SiPrisma size={90} className="hover:text-highlight" />
-      <BiLogoFlutter size={90} className="hover:text-highlight" />
-      <SiDart size={90} className="hover:text-highlight" />
-      <TbBrandCpp size={90} className="hover:text-highlight" />
+    <div className="flex w-[700px] overflow-hidden group no-scrollbar">
+      <div className="flex gap-16 animate-loop-scroll text-slate-300 group-hover:paused">
+        <BiLogoJavascript size={90} className="hover:text-highlight flex-shrink-0" />
+        <BiLogoTypescript size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiExpress size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiNodedotjs size={90} className="hover:text-highlight flex-shrink-0" />
+        <RiTailwindCssFill size={90} className="hover:text-highlight flex-shrink-0" />
+        <BiLogoMongodb size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiPrisma size={90} className="hover:text-highlight flex-shrink-0 mr-16" />
+      </div>
+      <div className="flex gap-16 animate-loop-scroll text-slate-300 group-hover:paused">
+        <BiLogoJavascript size={90} className="hover:text-highlight flex-shrink-0" />
+        <BiLogoTypescript size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiExpress size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiNodedotjs size={90} className="hover:text-highlight flex-shrink-0" />
+        <RiTailwindCssFill size={90} className="hover:text-highlight flex-shrink-0" />
+        <BiLogoMongodb size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiPrisma size={90} className="hover:text-highlight flex-shrink-0 mr-16" />
+      </div>
     </div>
 
 
-
+    <div className="flex flex-row-reverse w-[700px] overflow-hidden mt-16 group no-scrollbar">
+      <div className="flex gap-16 animate-loop-scroll-opposite text-slate-300 group-hover:paused">
+        <BiLogoFlutter size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiDart size={90} className="hover:text-highlight flex-shrink-0" />
+        <TbBrandCpp size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiLua size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiNeovim size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiXcode size={90} className="hover:text-highlight flex-shrink-0 mr-16" />
+      </div>
+      <div className="flex gap-16 animate-loop-scroll-opposite text-slate-300 group-hover:paused">
+        <BiLogoFlutter size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiDart size={90} className="hover:text-highlight flex-shrink-0" />
+        <TbBrandCpp size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiLua size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiNeovim size={90} className="hover:text-highlight flex-shrink-0" />
+        <SiXcode size={90} className="hover:text-highlight flex-shrink-0 mr-16" />
+      </div>
+    </div>
   </div>
 )
 
