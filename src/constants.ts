@@ -23,6 +23,7 @@ export interface CardDetail {
 }
 
 export interface Project {
+    id: string
     title: string,
     category: string,
     images: string[],
@@ -135,6 +136,7 @@ export const Facts: gameCard[] = [
 
 export const Projects: Project[] = [
     {
+        id: "1",
         title: "Genius",
         category: "Web Development",
         images: ['/genius_1.png', '/genius_2.png', '/genius_3.png'],
@@ -143,5 +145,84 @@ export const Projects: Project[] = [
         techstack: ["NextJs", "OPenAi", "ReactJS", "Postgress", "Prisma", "ShadcnUI"],
         github: "https://github.com/aryankumar07/genius",
         live: "https://genius-ten-navy.vercel.app",
-    }
+    },
+    {
+        id: "2",
+        title: "Grace",
+        category: "Web Development",
+        images: ['/grace_1.png', '/grace_2.png', '/grace_3.png', '/grace_4.png'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2024",
+        techstack: ["NextJs", "Tailwinf", "ReactJS", "MongoDb", "Prisma"],
+        github: "https://github.com/aryankumar07/grace",
+        live: "",
+    },
+    {
+        id: "3",
+        title: "Moving Containers",
+        category: "Web Development",
+        images: ['mc.png', 'mc.gif'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "December 2024",
+        techstack: ["Tailwind", "ReactJS", "CSS"],
+        github: "https://github.com/aryankumar07/reactStuff/tree/main/moving_containers",
+        live: ""
+    },
+    {
+        id: "5",
+        title: "HonestPOll",
+        category: "App Development",
+        images: ['neovim.png', 'mc.gif'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2024",
+        techstack: ["Lua", "Neovim", "Linux"],
+        github: "https://github.com/aryankumar07/dotfiles",
+        live: ""
+    },
+    {
+        id: "7",
+        title: "CheckInEase",
+        category: "App Development",
+        images: ['airbnb_1.png', 'airbnb.gif', 'airbnb_2.png', 'airbnb_3.png', 'airbnb_4.png'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2025",
+        techstack: ["Flutter", "Dart"],
+        github: "https://github.com/aryankumar07/checkInEase_frontend",
+        live: ""
+    },
+    {
+        id: "4",
+        title: "Client-Server-Model",
+        category: "C++ Development",
+        images: ['nothing.png', '4KT.gif'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2024",
+        techstack: ["c++", "Sockets"],
+        github: "https://github.com/aryankumar07/Client-server_model",
+        live: ""
+    },
+    {
+        id: "5",
+        title: "HonestPOll",
+        category: "App Development",
+        images: ['neovim.png', 'mc.gif'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2024",
+        techstack: ["Lua", "Neovim", "Linux"],
+        github: "https://github.com/aryankumar07/dotfiles",
+        live: ""
+    },
+    {
+        id: "6",
+        title: "Etsy",
+        category: "App Development",
+        images: ['etsy_1.png'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "August 2024",
+        techstack: ["Flutter", "Dart"],
+        github: "https://github.com/aryankumar07/cartopia",
+        live: ""
+    },
+
+
 ]

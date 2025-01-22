@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
         <button
             onClick={onClick}
             className={cn(
-                `flex justify-center items-center p-1 bg-greyish text-foreground rounded-lg cursor-pointer ${size}`,
+                `flex justify-center items-center p-1 bg-greyish text-foreground rounded-lg cursor-pointer ${size} hover:text-highlight`,
                 className
             )}
             {...rest}

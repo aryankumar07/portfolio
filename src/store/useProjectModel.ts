@@ -1,20 +1,21 @@
 import { create } from "zustand"
+import { Project } from "../constants"
 
 interface ProjetStore {
     isOpen: boolean
-    index: number
+    project: Project | null
     setOpen: () => void
     setClose: () => void
-    setIndex: (value: number) => void
+    setProject: (value: Project) => void
 }
 
 
 export const useProjectModel = create<ProjetStore>((set) => (
     {
         isOpen: false,
-        index: 0,
+        project: null,
         setOpen: () => set({ isOpen: true }),
         setClose: () => set({ isOpen: false }),
-        setIndex: (value: number) => set({ index: value })
+        setProject: (value: Project) => set({ project: value })
     }
 ))
