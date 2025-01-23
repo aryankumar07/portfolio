@@ -53,7 +53,7 @@ const ResumeBody = () => {
 
       <Heading value="My Skills" size="text-3xl" customClass="mt-8 mb-8" />
 
-      <div className="flex w-[700px] overflow-hidden group no-scrollbar">
+      <div className="flex w-[950px] overflow-hidden group no-scrollbar">
         <div className="flex gap-16 animate-loop-scroll text-slate-300 group-hover:paused">
           <BiLogoJavascript size={90} className="hover:text-highlight flex-shrink-0" />
           <BiLogoTypescript size={90} className="hover:text-highlight flex-shrink-0" />
@@ -75,7 +75,7 @@ const ResumeBody = () => {
       </div>
 
 
-      <div className="flex flex-row-reverse w-[700px] overflow-hidden mt-16 group no-scrollbar">
+      <div className="flex w-[950px] flex-row-reverse overflow-hidden mt-16 group no-scrollbar">
         <div className="flex gap-16 animate-loop-scroll-opposite text-slate-300 group-hover:paused">
           <BiLogoFlutter size={90} className="hover:text-highlight flex-shrink-0" />
           <SiDart size={90} className="hover:text-highlight flex-shrink-0" />
