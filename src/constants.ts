@@ -158,20 +158,9 @@ export const Projects: Project[] = [
         live: "",
     },
     {
-        id: "3",
-        title: "Moving Containers",
-        category: "Web Development",
-        images: ['mc.png', 'mc.gif'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-        date: "December 2024",
-        techstack: ["Tailwind", "ReactJS", "CSS"],
-        github: "https://github.com/aryankumar07/reactStuff/tree/main/moving_containers",
-        live: ""
-    },
-    {
         id: "5",
-        title: "HonestPoll",
-        category: "App Development",
+        title: "DotFiles",
+        category: "Config Files",
         images: ['neovim.png', 'mc.gif'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         date: "August 2024",
@@ -203,13 +192,24 @@ export const Projects: Project[] = [
     },
     {
         id: "5",
-        title: "HonestPOll",
+        title: "HonestPoll",
         category: "App Development",
-        images: ['neovim.png', 'mc.gif'],
+        images: ['hp_1.png', 'hpp_2.png'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
         date: "August 2024",
-        techstack: ["Lua", "Neovim", "Linux"],
-        github: "https://github.com/aryankumar07/dotfiles",
+        techstack: ["Flutter", "Dart", "Express", "Node"],
+        github: "https://github.com/aryankumar07/honestpol",
+        live: ""
+    },
+    {
+        id: "3",
+        title: "Moving Containers",
+        category: "Web Development",
+        images: ['mc.png', 'mc.gif'],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        date: "December 2024",
+        techstack: ["Tailwind", "ReactJS", "CSS"],
+        github: "https://github.com/aryankumar07/reactStuff/tree/main/moving_containers",
         live: ""
     },
     {
@@ -223,6 +223,4 @@ export const Projects: Project[] = [
         github: "https://github.com/aryankumar07/cartopia",
         live: ""
     },
-
-
 ]
