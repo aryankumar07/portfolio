@@ -19,8 +19,9 @@ const LeftConatiner = () => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
+      className="sticky top-0"
     >
-      <div className="m-2 flex flex-col lg:items-center bg-primary border  border-[#383838] h-auto rounded-3xl sticky top-0">
+      <div className="m-2 flex flex-col lg:items-center bg-primary border  border-[#383838] h-auto rounded-3xl">
         <div className="flex flex-row justify-between">
           <Leftheader />
           {
