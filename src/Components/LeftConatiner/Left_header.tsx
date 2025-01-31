@@ -1,3 +1,4 @@
+import AnimatedName from "../../commons/animatedName";
 import ImageContainer from "../../commons/ImageContainer";
 import Tags from "../../commons/tags";
 
@@ -7,7 +8,7 @@ const Leftheader = () => {
       <ImageContainer src="/image_header.jpg" />
       <div className="md:flex flex-col gap-2 justify-center items-center">
         <div className="text-foreground text-3xl md:text-5xl font-outfit">
-          Aryan
+          <AnimatedName title="Aryan" />
         </div>
         <Tags value="Web developer" />
       </div>
