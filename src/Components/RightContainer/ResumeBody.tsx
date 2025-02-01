@@ -14,7 +14,7 @@ const ResumeBody = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="p-5 overflow-x-hidden">
+      <div className="p-5">
         <div className="mt-6 lg:w-full">
           <div className="flex flex-row justify-start items-center gap-6 p-3">
             <IconsTag icontag={BookOpen} />
