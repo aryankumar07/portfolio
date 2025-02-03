@@ -5,7 +5,7 @@ interface AnimatedNameProps {
   title: string;
   width?: number;
   height?: number;
-  fontSize: string
+  fontSize?: string
   radius?: number;
 }
 
@@ -13,7 +13,7 @@ const AnimatedName: React.FC<AnimatedNameProps> = ({
   title,
   width = 150,
   height = 50,
-  fontSize = "50px",
+  fontSize = "35px",
   radius = 20
 }) => {
   useEffect(() => {
