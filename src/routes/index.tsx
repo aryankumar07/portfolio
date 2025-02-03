@@ -8,11 +8,11 @@ import BattleField from "./battleField.tsx";
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "/battleField",
       element: <App />
     },
     {
-      path: "/battleField",
+      path: "/",
       element: <BattleField />
     }
   ]
