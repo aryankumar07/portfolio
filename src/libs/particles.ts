@@ -22,10 +22,7 @@ class Particle {
   }
 
   draw() {
-    const gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
-    gradient.addColorStop(0, "red");
-    gradient.addColorStop(1, "orange");
-    this.ctx.fillStyle = gradient;
+    this.ctx.fillStyle = "#ffdb70";
 
     this.ctx.beginPath()
     this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)

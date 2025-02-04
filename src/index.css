@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,29 +10,27 @@
   }
 }
 
-
+* {
+  box-sizing: border-box;
+}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari, and Edge */
 }
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
   scrollbar-width: none;
-  /* Firefox */
 }
-
-
 
 body {
   background: var(--background);
 }
 
 .light {
-  --foreground: #0F0F0F;
-  --background: #000000;
+  --foreground: #fafafa;
+  --foreground-dim: #d6d6d6;
+  --background: #111111;
   --primary: #1E1E1F;
   --secondary: #191f22;
   --highlight: #ffdb70;
@@ -42,8 +40,9 @@ body {
 
 
 .dark {
-  --background: #000000;
-  --foreground: #d6d6d6;
+  --background: #111111;
+  --foreground-dim: #d6d6d6;
+  --foreground: #fafafa;
   --primary: #1E1E1F;
   --secondary: #191f22;
   --highlight: #ffdb70;

@@ -7,11 +7,9 @@ interface TagProps {
 
 const Tags: React.FC<TagProps> = ({ value }) => {
   return (
-    <div className="text-foreground  md:p-1 rounded-md text-sm bg-greyish font-outfit">
-      {
-        value
-      }
-    </div>
+    <span className="text-foreground px-4 py-1 text-center rounded-md text-sm bg-greyish font-outfit">
+      {value}
+    </span>
   )
 }
 

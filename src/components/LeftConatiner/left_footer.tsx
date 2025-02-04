@@ -2,7 +2,7 @@ import { SocialHandles } from "../../constants";
 
 const LeftFooter = () => {
   return (
-    <div className="flex flex-row gap-3 p-2 mt-1">
+    <div className="flex flex-row gap-3 ">
       {
         SocialHandles.map((handle) => {
           return (
@@ -11,9 +11,9 @@ const LeftFooter = () => {
               href={handle.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-500 transition-colors duration-200"
+              className="text-neutral-500 hover:text-neutral-200 transition-all ease-linear duration-300"
             >
-              <handle.icon />
+              <handle.icon size={18} />
             </a>
           )
         })

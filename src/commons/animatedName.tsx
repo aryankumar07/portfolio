@@ -29,12 +29,9 @@ const AnimatedName: React.FC<AnimatedNameProps> = ({
       return;
     }
 
-    ctx.font = `${fontSize} 'Pacifico', cursive`;
+    ctx.font = `${fontSize} cursive`;
     ctx.textBaseline = "middle";
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-    gradient.addColorStop(0, "red");
-    gradient.addColorStop(1, "orange");
-    ctx.fillStyle = gradient;
+    ctx.fillStyle = "white";
 
     const text = title;
     const textWidth = ctx.measureText(text).width;
@@ -89,7 +86,7 @@ const AnimatedName: React.FC<AnimatedNameProps> = ({
     };
   }, [title]);
 
-  return <canvas id="canva"> No Support! </canvas>;
+  return <canvas id="canva"> {title} </canvas>;
 };
 
 export default AnimatedName;

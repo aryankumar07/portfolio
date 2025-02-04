@@ -84,53 +84,53 @@ export const CardsDetail: CardDetail[] = [
     id: "1241414",
     icon: Code,
     heading: "Web Development",
-    description: "High Quality Full Stacl Sites Coded at Professional Level",
+    description: "High-quality full-stack websites developed to professional standards.",
   },
   {
     id: "978798",
     icon: TabletSmartphone,
-    heading: "Mobile Apps",
-    description: "Professional Development for Both iOS and Cross Platform",
+    heading: "Mobile Applications",
+    description: "Professional development services for both iOS and cross-platform applications.",
   },
   {
     id: "57656",
     icon: BrainCog,
-    heading: "Problem Solver",
-    description: "Efficient in Problem Solving Skills and Building C++ builds",
+    heading: "Problem Solving",
+    description: "Proficient in problem-solving skills and building C++ applications.",
   },
   {
     id: "10014",
     icon: Gamepad,
-    heading: "Gamer At Night",
-    description: "Love To Mend that elden Ring",
+    heading: "Gaming at Night",
+    description: "Passionate about gaming, particularly enjoying titles like Elden Ring.",
   },
-]
+];
 
 export const Facts: gameCard[] = [
   {
     name: "John Marston",
     game: "Red Dead Redemption 2",
     image: "/john.png",
-    quote: "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair"
+    quote: "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair."
   },
   {
     name: "Kratos",
     game: "GOD OF WAR",
     image: "/kratos.png",
-    quote: "Death Can Have Me When It Earns Me"
+    quote: "Death can have me when it earns me."
   },
   {
     name: "Max Payne",
     game: "Max Payne",
     image: "/maxpayne.png",
-    quote: "Nothing is a cliché when it's happening to you"
+    quote: "Nothing is a cliché when it's happening to you."
   },
 
   {
     name: "Maleina",
     game: "Elden Ring",
     image: "/malenia.png",
-    quote: "You Will Witness True Horror",
+    quote: "You will witness true horror.",
   }
 ]
 

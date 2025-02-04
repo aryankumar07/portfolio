@@ -9,6 +9,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        lightForeground: "var(--foreground-dim)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         highlight: "var(--highlight)",
@@ -16,7 +17,7 @@ export default {
         "greyish-transparent": "var(--greyish-transparent)",
       },
       fontFamily: {
-        outfit: ["Outfit", "serif"]
+        outfit: ["Poppins", "serif"]
       },
       boxShadow: {
         "1xl": 'rgb(204, 219, 232) 1px 1px 6px -5px inset',
