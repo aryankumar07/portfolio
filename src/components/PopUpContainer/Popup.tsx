@@ -45,26 +45,21 @@ const Popup: React.FC<PopupProps> = ({
 
 
   return (
-    <div id="OutsideDiv" className="fixed flex inset-0 justify-center items-center overflow-x-hidden overflow-y-auto z-50 bg-neutral-800/70 backdrop-blur-sm">
-      <div id="InsideDiv" className={`flex fixed border border-[#383838] justify-center items-center text-foreground rounded-xl bg-primary h-auto w-full
-            ${big ? 'md:h-[80%] md:w-[50%] md:ml-[8vw] lg:mt-4 md:mt-0' : 'mt-[25vh] lg:h-72  lg:w-[50%] md:w-[80%] md:mt-[8vh] lg:ml-[15vw] md:ml-[-1vw]'}`}>
-        <div className="flex h-full w-full flex-col justify-start items-center">
+    <div id="OutsideDiv" className="">
+      <div id="InsideDiv" className={``}>
+        <div className="">
           {
             !big ?
-              <div className="h-auto p-1 w-full flex flex-row justify-end items-end">
+              <div className="">
                 <X size={30} className="hover:text-highlight cursor-pointer mr-4" onClick={setClose} />
               </div> : null
           }
 
-          <div className="h-auto w-full">
+          <div className="">
             {data}
           </div>
-          <Line height="1px" className="absolute bottom-12 hidden" />
-          {
-            big ?
-              <Button value="Done" onClick={setClose} className="absolute mb-2 mr-2 right-0 bottom-0" /> :
-              null
-          }
+          <Line height="1px" className="" />
+          {big && <Button value="Done" onClick={setClose} className="" />}
         </div>
       </div>
     </div>
