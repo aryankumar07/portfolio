@@ -1,4 +1,3 @@
-import Heading from "../../commons/heading";
 import { Eye } from "lucide-react"
 import { Projects, Project } from "../../constants";
 import { useProjectModel } from "../../store/useProjectModel";
