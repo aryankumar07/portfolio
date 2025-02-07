@@ -9,7 +9,9 @@ interface RightHeaderProps {
 const RightHeader: React.FC<RightHeaderProps> = ({ isActive }) => {
   return (
     <div className="flex flex-col gap-3 justify-start items-start text-foreground text-3xl font-semibold font-outfit">
-      {headers[isActive]}
+      <span>
+        {headers[isActive]}
+      </span>
       <Line color="#ffdb70" height="5px" width="50px" />
     </div>
   );

@@ -148,7 +148,7 @@ export const Projects: Project[] = [
   },
   {
     id: "7",
-    title: "Aryans Lair",
+    title: "Aryan's Lair",
     category: "Web Development",
     images: ['/port_1.png', '/port_2.png', '/port_3.png'],
     description: "I have developed a personal portfolio website using React, incorporating various dependencies to enhance functionality and design. The project utilizes framer-motion for animations, react-icons for scalable vector icons, react-router-dom for client-side routing, and tailwindcss for efficient styling. These tools collectively contribute to a dynamic and responsive user experience. The source code is available on my GitHub repository",
@@ -157,7 +157,17 @@ export const Projects: Project[] = [
     github: "https://github.com/aryankumar07/genius",
     live: "https://portfolio-aryans-projects-0efed95e.vercel.app",
   },
-
+  {
+    id: "6",
+    title: "Etsy",
+    category: "App Development",
+    images: ['etsy_1.png'],
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    date: "August 2024",
+    techstack: ["Flutter", "Dart"],
+    github: "https://github.com/aryankumar07/cartopia",
+    live: ""
+  },
   {
     id: "2",
     title: "Grace",
@@ -171,7 +181,7 @@ export const Projects: Project[] = [
   },
   {
     id: "5",
-    title: "DotFiles",
+    title: "Dotfiles",
     category: "Config Files",
     images: ['neovim.png', 'mc.gif'],
     description: "Created and maintained a dotfiles repository to streamline and personalize the development environment across multiple machines. Organized configuration files for various tools, including shell environments, text editors, and version control systems, to ensure consistency and efficiency in workflows. Implemented automation scripts to simplify the setup process, reducing setup time and enhancing productivity. This repository serves as a centralized and version-controlled solution for managing and sharing development environment preferences, ensuring a seamless experience across different systems. Also Include the .zshrc files for macos users",
@@ -224,15 +234,5 @@ export const Projects: Project[] = [
     github: "https://github.com/aryankumar07/reactStuff/tree/main/moving_containers",
     live: ""
   },
-  {
-    id: "6",
-    title: "Etsy",
-    category: "App Development",
-    images: ['etsy_1.png'],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    date: "August 2024",
-    techstack: ["Flutter", "Dart"],
-    github: "https://github.com/aryankumar07/cartopia",
-    live: ""
-  },
+
 ]

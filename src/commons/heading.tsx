@@ -10,13 +10,15 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({
   value,
   color = 'text-foreground',
-  size = "text-xl",
+  size = "text-lg md:text-xl",
   font = 'font-semibold font-outfit',
   customClass = "",
 }) => {
-  return <div className={cn(`${color} ${size} ${font}`, customClass)}>
-    {value}
-  </div>
+  return (
+    <span className={cn(`${color} ${size} ${font}`, customClass, "inline-flex items-center")}>
+      {value}
+    </span>
+  )
 }
 
 export default Heading;
