@@ -1,72 +1,63 @@
 import React, { useEffect } from "react";
-import { X } from 'lucide-react'
+import { X } from "lucide-react";
 import Button from "../../commons/button";
 import Line from "../../commons/line";
 
 interface PopupProps {
-  isOpen: boolean
-  data?: JSX.Element
-  setClose: () => void
-  big?: boolean
+  isOpen: boolean;
+  data?: JSX.Element;
+  setClose: () => void;
+  big?: boolean;
 }
 
 const Popup: React.FC<PopupProps> = ({
   isOpen,
   setClose,
-  data = <h1>Default body </h1>,
-  big = false
+  data = <h1>Default body</h1>,
+  big = false,
 }) => {
-
-
   useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
-      // used event.target instead of event.cureentarget ...
-      const handleEvent = event.target as HTMLElement
-      if (!handleEvent.closest("#InsideDiv")) {
-        setClose()
+    const handleClickOutside = (event: MouseEvent) => {
+      const targetElement = event.target as HTMLElement;
+      if (!targetElement.closest("#InsideDiv")) {
+        setClose();
       }
-    }
-    // if the popUp is open then only add the eventListner of used without isOpen then the eventlistner is added to as soon as the site is loaded
+    };
+
     if (isOpen) {
-      const PopUpdiv = document.getElementById("OutsideDiv")
-      PopUpdiv!.addEventListener('mousedown', handleClick)
+      document.addEventListener("mousedown", handleClickOutside);
     }
+
     return () => {
-      document.removeEventListener('mousedown', handleClick)
-    }
-  }, [isOpen, setClose])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, setClose]);
 
-
-
-  if (!isOpen) {
-    return null;
-  }
-
-
+  if (!isOpen) return null;
 
   return (
-    <div id="OutsideDiv" className="">
-      <div id="InsideDiv" className={``}>
-        <div className="">
-          {
-            !big ?
-              <div className="">
-                <X size={30} className="hover:text-highlight cursor-pointer mr-4" onClick={setClose} />
-              </div> : null
-          }
-
-          <div className="">
-            {data}
+    <div className="fixed inset-0 flex items-center justify-center backdrop-blur-md bg-black/50 z-50">
+      <div
+        id="InsideDiv"
+        className="relative bg-primary rounded-3xl w-[90%] md:w-[60%] lg:w-[50vw] max-h-[80vh] overflow-y-auto border border-[#383838] shadow-lg"
+      >
+        {!big && (
+          <div className="absolute top-3 right-3">
+            <X
+              size={30}
+              className="hover:text-highlight cursor-pointer"
+              onClick={setClose}
+            />
           </div>
-          <Line height="1px" className="" />
-          {big && <Button value="Done" onClick={setClose} className="" />}
+        )}
+        <div className="p-6">
+          {data}
+          {big && <Line height="1px" />}
+          {big && <div className="flex items-center justify-end mt-2"><Button value="Done" onClick={setClose} /></div>}
         </div>
       </div>
     </div>
-  )
-
-}
-
+  );
+};
 
 export default Popup;
-

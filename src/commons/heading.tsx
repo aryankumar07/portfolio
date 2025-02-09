@@ -10,7 +10,7 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({
   value,
   color = 'text-foreground',
-  size = "text-lg md:text-xl",
+  size = "text-xl md:text-md",
   font = 'font-semibold font-outfit',
   customClass = "",
 }) => {

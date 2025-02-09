@@ -37,22 +37,22 @@ const ProjectPopup = () => {
 
 
   const body = (
-    <div className="">
-      <ChevronLeft onClick={prevPicture} size={30} className="" />
-      <ChevronLeft onClick={nextPicture} size={30} className="" />
+    <div className="text-foreground">
+      <ChevronLeft onClick={prevPicture} size={30} className="absolute top-[25vh] left-0 cursor-pointer hover:text-highlight" />
+      <ChevronLeft onClick={nextPicture} size={30} className="absolute top-[25vh] right-0 rotate-180 cursor-pointer hover:text-highlight " />
       {
         project!.images.map((image, index) => {
           return <img
             key={index}
             src={image}
             alt="Image"
-            className={`object-contain rounded-t-xl ${index == pos ? "block" : "hidden"}`}
+            className={`object-contain w-full h-64 rounded-t-xl ${index == pos ? "block" : "hidden"}`}
           />
         })
       }
       <Line height="1px" />
-      <div className="">
-        <div className="">
+      <div className="flex flex-col gap-2 sm:flex-row mt-4 mb-4">
+        <div className="flex flex-row sm:flex-col gap-2">
           <Button
             onClick={() => window.open(project!.github, "_blank")}
             value="Github"
@@ -65,8 +65,8 @@ const ProjectPopup = () => {
             className={`hover:text-highlight ${project!.live.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} `}
           />
         </div>
-        <div className="">
-          <Heading value={project!.title} size="" />
+        <div className="flex flex-col gap-2 items-start justify-center">
+          <Heading value={project!.title} size="text-2xl" />
           <p className="font-outfit" >{project!.date}</p>
           <p className="text-justify">
             {project!.description}

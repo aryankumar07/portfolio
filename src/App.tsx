@@ -15,7 +15,7 @@ const App = () => {
       'mx-auto min-[600px]:my-14',
       'flex',
       'flex-col min-[1336px]:flex-row',
-      'justify-center gap-6 p-4'
+      'justify-center gap-6 p-4',
     )}>
       <LeftContainer />
       <RightContainer />
