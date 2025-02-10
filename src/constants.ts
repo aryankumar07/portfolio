@@ -158,6 +158,17 @@ export const Projects: Project[] = [
     live: "https://portfolio-aryans-projects-0efed95e.vercel.app",
   },
   {
+    id: "8",
+    title: "Blogs App",
+    category: "Web Development",
+    images: ['/blog.png'],
+    description: "This web application is designed for writers, thinkers, and creators to effortlessly publish their ideas. With a clean interface using Clerk and imagekit.io for seamless authentication and image storing using webhooks foor string user in mu Mongodb databse with server writen in expres and frontend in ReactJs",
+    date: "January 2025",
+    techstack: ["ReactJS", "Express", "MongoDB", "Node"],
+    github: "https://github.com/aryankumar07/blog",
+    live: "https://blogs-v1-app.vercel.app"
+  },
+  {
     id: "6",
     title: "Etsy",
     category: "App Development",
