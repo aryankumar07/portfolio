@@ -39,7 +39,7 @@ const ProjectBody = () => {
                     </div>
                     <img src={project.images[0]} className="rounded-lg border-neutral-600 border" />
                   </div>
-                  <p className="mt-2 text-xl">{project.title}</p>
+                  <p className="mt-2 text-lg">{project.title}</p>
                   <p className="text-neutral-500 text-sm">{project.category}</p>
                 </div>
               )

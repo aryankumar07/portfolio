@@ -22,11 +22,13 @@ const GamePopUp = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col justify-start items-start">
-          <Heading value={data.name} size="text-3xl" customClass="mt-6 mb-2" />
-          <p>{data.game}</p>
-          <p className="">
+          <div>
+            <Heading value={data.name} size="text-3xl" customClass="mt-4" />
+            <div className="text-sm">{data.game}</div>
+          </div>
+          <span className="mt-2">
             {data.quote}
-          </p>
+          </span>
         </div>
       </div>
     </div>
