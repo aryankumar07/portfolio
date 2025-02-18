@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { X } from "lucide-react";
 import Button from "../../commons/button";
-import Line from "../../commons/line";
 
 interface PopupProps {
   isOpen: boolean;
