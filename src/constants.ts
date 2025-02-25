@@ -115,7 +115,7 @@ export const Facts: gameCard[] = [
   },
   {
     name: "Kratos",
-    game: "GOD OF WAR",
+    game: "God of war",
     image: "/kratos.png",
     quote: "Death can have me when it earns me."
   },
@@ -238,7 +238,7 @@ export const Projects: Project[] = [ // current Project no : 9
     id: "5",
     title: "HonestPoll",
     category: "App Development",
-    images: ['hp_1.png', 'hpp_2.png'],
+    images: ['hp_1.png', 'hp_2.png'],
     description: "Developed a cross-platform voting application using Flutter and Dart, delivering a seamless user experience on both iOS and Android devices. Integrated Node.js for the backend to manage user authentication and voting logic, with MongoDB for efficient database management of voting data and user information. Ensured the security of user votes and privacy using JWT (JSON Web Tokens) and persisted user state with local storage for a consistent experience. Leveraged various Flutter packages and dependencies to enhance application performance, resulting in a smooth and responsive user experience across platforms.",
     date: "August 2024",
     techstack: ["Flutter", "Dart", "Express", "Node"],

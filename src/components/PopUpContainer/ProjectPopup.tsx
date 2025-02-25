@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Button from "../../commons/button"
 import Heading from "../../commons/heading"
-import Line from "../../commons/line"
 import { useProjectModel } from "../../store/useProjectModel"
 import Popup from "./Popup"
 import { ChevronLeft } from 'lucide-react'
@@ -38,8 +37,16 @@ const ProjectPopup = () => {
 
   const body = (
     <div className="text-foreground">
-      <ChevronLeft onClick={prevPicture} size={30} className="absolute top-[25vh] left-0 cursor-pointer hover:text-highlight" />
-      <ChevronLeft onClick={nextPicture} size={30} className="absolute top-[25vh] right-0 rotate-180 cursor-pointer hover:text-highlight " />
+      <ChevronLeft
+        onClick={prevPicture}
+        size={30}
+        className="absolute top-[15vh] left-3 bg-neutral-600 rounded cursor-pointer hover:text-highlight "
+      />
+      <ChevronLeft
+        onClick={nextPicture}
+        size={30}
+        className="absolute top-[15vh] right-3 bg-neutral-600 rounded rotate-180 cursor-pointer hover:text-highlight "
+      />
       {
         project!.images.map((image, index) => {
           return <img
@@ -50,25 +57,26 @@ const ProjectPopup = () => {
           />
         })
       }
-      <Line height="1px" />
-      <div className="flex flex-col gap-2 sm:flex-row mt-4 mb-4">
-        <div className="flex flex-row sm:flex-col gap-2">
+      <div className="flex gap-4 pt-7">
+        <div className="w-1/6 flex-shrink-0 flex flex-col gap-3 justify-start items-center">
           <Button
             onClick={() => window.open(project!.github, "_blank")}
             value="Github"
-            className={`hover:text-highlight ${project!.github.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} `}
+            className={`hover:text-highlight w-full ${project!.github.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} `}
           />
 
           <Button
             onClick={() => window.open(project!.live, "_blank")}
             value="Live"
-            className={`hover:text-highlight ${project!.live.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} `}
+            className={`hover:text-highlight w-full ${project!.live.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} `}
           />
         </div>
-        <div className="flex flex-col gap-2 items-start justify-center">
-          <Heading value={project!.title} size="text-2xl" />
-          <p className="font-outfit" >{project!.date}</p>
-          <p className="text-justify">
+        <div>
+          <div>
+            <Heading value={project!.title} size="text-2xl" />
+            <p className="font-outfit text-xs" >{project!.date}</p>
+          </div>
+          <p className=" mt-2">
             {project!.description}
           </p>
         </div>
