@@ -134,7 +134,18 @@ export const Facts: gameCard[] = [
   }
 ]
 
-export const Projects: Project[] = [
+export const Projects: Project[] = [ // current Project no : 9
+  {
+    id: '9',
+    title: 'NOTE CLI',
+    category: 'Command Line',
+    images: ['/note_cli.png', '/note_cli1.png', '/note_cli2.png', '/note_cli3.png'],
+    description: 'As developers, we spend a significant amount of time working in our terminals, juggling multiple tasks, and managing project workflows. While there are many task management tools available, most of them are either online-dependent, overly complex, or require switching contexts away from the terminal. Note CLI aims to solve this problem by providing a lightweight, offline-friendly, and easy-to-use command-line interface (CLI) tool for managing project tasks efficiently With Note CLI, you can create, update, delete, and organize tasks directly from your terminal, ensuring that your workflow remains uninterrupted. Whether youre working on a personal project, collaborating with a team, or just need a quick way to jot down ideas, Note CLI is designed to be your go-to task management companion',
+    date: 'January 2025',
+    techstack: ["Node", "Javscript"],
+    github: 'https://github.com/aryankumar07/note_cli',
+    live: 'https://www.npmjs.com/package/@tarnished_aryan/note'
+  },
   {
     id: "1",
     title: "Genius",
