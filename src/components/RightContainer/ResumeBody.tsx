@@ -12,7 +12,7 @@ const ResumeBody = () => {
     <>
       <button
         className="absolute right-4 p-3 hover:bg-neutral-700 group duration-150 transition-colors cursor-pointer rounded-md"
-        onClick={() => window.open("https://drive.google.com/file/d/195oi7jOpksM4t-or1fdmRYPV8wGwJAW8/view?usp=sharing", "_blank")}
+        onClick={() => window.open("https://drive.google.com/file/d/1mDqLOTGDtruNnDALhWKFvLNdlcTvrFcg/view?usp=sharing", "_blank")}
       >
         <DownloadIcon size={20} className="text-foreground group-hover:text-highlight " />
       </button >
