@@ -1,5 +1,9 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
 
+type FiltersMap = {
+  [key: string]: string; // Index signature
+};
+
 export interface ProfileTag {
   id: string,
   icon: LucideIcon,
@@ -80,7 +84,15 @@ export const SocialHandles = [
 ]
 
 export const headers = ["About Me", "Resume", "Projects", "Blog"]
+export const filters = ["WEB", "CLI", "CONFIG", "APP"]
 
+export const filtersMap: FiltersMap = {
+  WEB: "Web Development",
+  CLI: "Command Line",
+  CONFIG: "Config Files",
+  APP: "App Development",
+  CPP: "C++ Development",
+};
 export const CardsDetail: CardDetail[] = [
   {
     id: "1241414",
@@ -182,7 +194,7 @@ export const Projects: Project[] = [ // current Project no : 9
     live: "https://blogs-v1-app.vercel.app"
   },
   {
-    id: "6",
+    id: "11",
     title: "Etsy",
     category: "App Development",
     images: ['etsy_1.png'],
@@ -215,7 +227,7 @@ export const Projects: Project[] = [ // current Project no : 9
     live: ""
   },
   {
-    id: "7",
+    id: "10",
     title: "CheckInEase",
     category: "App Development",
     images: ['airbnb_1.png', 'airbnb.gif', 'airbnb_2.png', 'airbnb_3.png', 'airbnb_4.png'],
@@ -237,7 +249,7 @@ export const Projects: Project[] = [ // current Project no : 9
     live: ""
   },
   {
-    id: "5",
+    id: "12",
     title: "HonestPoll",
     category: "App Development",
     images: ['hp_1.png', 'hp_2.png'],

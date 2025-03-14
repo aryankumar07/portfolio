@@ -36,6 +36,7 @@ body {
   --highlight: #ffdb70;
   --greyish: #2B2B2C;
   --greyish-transparent: rgba(43, 43, 44, 0.1);
+  --lightgrey: #d6d6d6;
 }
 
 
@@ -48,4 +49,5 @@ body {
   --highlight: #ffdb70;
   --greyish: #2B2B2C;
   --greyish-transparent: rgba(43, 43, 44, 0.9);
+  --lightgrey: #d6d6d6;
 }

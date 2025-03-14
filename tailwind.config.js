@@ -15,6 +15,7 @@ export default {
         highlight: "var(--highlight)",
         greyish: "var(--greyish)",
         "greyish-transparent": "var(--greyish-transparent)",
+        "lightgrey": "var(--lightgrey)"
       },
       fontFamily: {
         outfit: ["Poppins", "serif"]

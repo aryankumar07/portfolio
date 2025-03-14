@@ -21,7 +21,7 @@ const RightContainer = () => {
           <button
             key={index}
             onClick={() => setIsActive(index)}
-            className={`${index === isActive ? 'text-highlight' : 'text-foreground'} px-6 py-4 cursor-pointer`}
+            className={`${index === isActive ? 'text-highlight' : 'text-foreground'} hover:text-lightgrey px-6 py-4 cursor-pointer`}
           >
             {head}
           </button>

@@ -1,16 +1,30 @@
-import { Eye } from "lucide-react"
-import { Projects, Project } from "../../constants";
+import { Eye, RotateCcw } from "lucide-react"
+import { Projects, Project, filters, filtersMap } from "../../constants";
 import { useProjectModel } from "../../store/useProjectModel";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const ProjectBody = () => {
 
   const setProject = useProjectModel((state) => state.setProject)
   const setOpen = useProjectModel((state) => state.setOpen)
+  const [projects, setProjects] = useState<Project[]>(Projects)
+  const [active, setActive] = useState<string | undefined>(undefined)
 
   const handelClick = (value: Project) => {
     setProject(value)
     setOpen()
+  }
+
+  const handlefilter = (filter: string) => {
+    if (filter) {
+      const filtered = filtersMap[filter]
+      const newprojects = Projects.filter((project) => {
+        return project.category === filtered
+      })
+      setActive(filter)
+      setProjects(newprojects)
+    }
   }
 
 
@@ -21,9 +35,31 @@ const ProjectBody = () => {
       transition={{ duration: 0.3 }}
     >
       <div className="">
+        <div className="flex justify-between items-center">
+          <div className="flex gap-3 justify-start items-center">
+            {
+              filters.map((filter) => {
+                return (
+                  <button
+                    key={filter}
+                    onClick={() => handlefilter(filter)}
+                    className={`${active === filter ? 'text-highlight' : 'text-foreground'} hover:text-lightgrey w-24 h-16`}>
+                    {filter}
+                  </button>
+                )
+              })
+            }
+          </div>
+          <RotateCcw
+            onClick={() => {
+              setProjects(Projects)
+              setActive(undefined)
+            }}
+            className={`text-foreground cursor-pointer hover:text-highlight`} />
+        </div>
         <div className="columns-1 md:columns-2 md:gap-3 lg:columns-3">
           {
-            Projects.map((project) => {
+            projects.map((project) => {
               return (
                 <div
                   key={project.id}
