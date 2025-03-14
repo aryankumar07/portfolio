@@ -5,6 +5,7 @@ export interface ProfileTag {
   icon: LucideIcon,
   title: string,
   content: string,
+  link?: string,
 }
 
 export interface gameCard {
@@ -40,7 +41,8 @@ export const Profiletags: ProfileTag[] = [
     id: "123131",
     icon: MailCheck,
     title: "EMAIL",
-    content: "aryan.pageme"
+    content: "aryan.pageme",
+    link: 'mailto:aryan.pageme@gmail.com'
   },
   {
     id: " 354634643",
