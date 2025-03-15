@@ -1,4 +1,5 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
+import Example from '../blog/example.mdx'
 
 type FiltersMap = {
   [key: string]: string; // Index signature
@@ -272,3 +273,20 @@ export const Projects: Project[] = [ // current Project no : 9
   },
 
 ]
+
+
+
+export const Blogs = [
+  {
+    id: "1234",
+    title: 'Regex',
+    image: 'regex.png',
+    body: Example
+  }
+]
+
+
+
+
+
+
