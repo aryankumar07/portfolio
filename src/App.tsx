@@ -1,4 +1,5 @@
 import LeftContainer from "./components/LeftConatiner/leftBody"
+import BlogPopUp from "./components/PopUpContainer/BlogPopUp"
 import GamePopUp from "./components/PopUpContainer/GamePopUp"
 import ProjectPopup from "./components/PopUpContainer/ProjectPopup"
 import RightContainer from "./components/RightContainer/RightBody"
@@ -21,6 +22,7 @@ const App = () => {
       <RightContainer />
       <GamePopUp />
       <ProjectPopup />
+      <BlogPopUp />
     </div>
   )
 }

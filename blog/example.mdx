@@ -1,5 +1,38 @@
 # Hello, MDX!
+#* [markdown syntax](#alpha)
+
+* [markdown syntax](#alpha)
+* <a href="#bravo">JSX with a lowercase name</a>
+
+
 
 This is a **Markdown** file with JSX!
 
 <button onClick={() => alert('Hello!')}>Click Me</button>
+
+---
+
+
+> Hightlighting text using componets\
+<span>Highlighted Text</span>
+
+# What is MDX?
+
+MDX is a powerful format that allows you to write **Markdown** with embedded **JSX**. This means you can seamlessly combine the simplicity of Markdown with the dynamic capabilities of React components. Whether you're writing documentation, blog posts, or interactive tutorials, MDX bridges the gap between static content and interactive user interfaces.
+
+In this blog post, we'll explore what MDX is, why it's useful, and how you can use it in your React applications. By the end, you'll have a solid understanding of MDX and how to leverage it to create rich, interactive content.
+
+---
+
+## Why Use MDX?
+
+### 1. **Combine Markdown and JSX**
+Markdown is great for writing static content like blog posts, documentation, or README files. However, it lacks the ability to create dynamic, interactive elements. JSX, on the other hand, is perfect for building reusable components and interactive UIs. MDX brings the best of both worlds, allowing you to embed JSX directly into your Markdown.
+
+For example:
+```
+# Welcome to My Blog
+```
+Here's a button that shows an alert when clicked:
+```
+<button onClick={() => alert('Hello, world!')}>Click Me</button>

@@ -11,7 +11,6 @@ const BlogBody = () => {
       transition={{ duration: 0.3 }}
     >
       <div className="columns-1 md:columns-2 md:gap-3 lg:columns-3">
-        Working on it.....
         {
           Blogs.map((blog) => {
             return (
@@ -31,7 +30,6 @@ const BlogBody = () => {
                 </div>
                 <p className="mt-2 text-lg">{blog.title}</p>
               </div>
-
             )
           })
         }
