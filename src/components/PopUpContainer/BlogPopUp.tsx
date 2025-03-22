@@ -14,6 +14,9 @@ const BlogPopUp = () => {
   // const blog = useBlogModel((state)=>state.blog)
 
 
+  console.log(Example)
+
+
   const Body = (
     <div className="">
       <div>
@@ -31,17 +34,10 @@ const BlogPopUp = () => {
             likeed
           </div>
         }
-        <div className="col-span-4 text-foreground">
-          <Example
-            components={{
-              a(props) {
-                return <a {...props} style={{ borderTop: '1px dotted', color: 'violet' }} />
-              },
-              span(props) {
-                return <span style={{ color: 'orange' }} >{props.children}</span>
-              }
-            }}
-          />
+        <div className="col-span-4">
+          <div className="markdown-body">
+            <Example />
+          </div>
         </div>
         {maximum &&
           <div className="bg-green-500 col-span-1">
