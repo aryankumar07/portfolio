@@ -3,6 +3,7 @@ import Popup from "./Popup"
 import Example from '../../../blog/example.mdx'
 import { useMaximumStore } from "../../store/useMaximumStore"
 import { cn } from '../../libs/utils'
+import { useEffect } from "react"
 
 
 
@@ -14,8 +15,21 @@ const BlogPopUp = () => {
   // const blog = useBlogModel((state)=>state.blog)
 
 
-  console.log(Example)
-
+  useEffect(() => {
+    const headings = document.querySelectorAll('#blogHeads')
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry.target.textContent)
+        entry.target.classList.toggle('show', entry.isIntersecting)
+      })
+    }, {
+      threshold: 1
+    }
+    )
+    headings.forEach((heading) => {
+      observer.observe(heading)
+    })
+  })
 
   const Body = (
     <div className="">
@@ -30,8 +44,8 @@ const BlogPopUp = () => {
         `grid ${maximum ? 'grid-cols-6' : 'grid-cols-1'}`
       )}>
         {maximum &&
-          <div className="bg-yellow-500 col-span-1">
-            likeed
+          <div className="col-span-1">
+            Liked
           </div>
         }
         <div className="col-span-4">
@@ -40,8 +54,8 @@ const BlogPopUp = () => {
           </div>
         </div>
         {maximum &&
-          <div className="bg-green-500 col-span-1">
-            Slider
+          <div className="col-span-1">
+
           </div>
         }
       </div>
