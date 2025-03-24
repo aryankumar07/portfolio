@@ -11,7 +11,7 @@ interface BlogModelProp {
 
 
 export const useBlogModel = create<BlogModelProp>((set) => ({
-  isOPen: true,
+  isOPen: false,
   blog: null,
   setOPen: () => set({ isOPen: true }),
   setClose: () => set({ isOPen: false }),

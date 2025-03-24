@@ -1,5 +1,7 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
 import Example from '../blog/example.mdx'
+import Example2 from '../blog/example2.mdx'
+import { ComponentType } from 'react';
 
 type FiltersMap = {
   [key: string]: string; // Index signature
@@ -279,7 +281,7 @@ export interface Iblog {
   id: string,
   title: string,
   image: string,
-  body: React.ElementType
+  body: ComponentType
 }
 
 
@@ -295,7 +297,7 @@ export const Blogs: Iblog[] = [
     id: "1235",
     title: 'Regex',
     image: 'regex.png',
-    body: Example
+    body: Example2
   },
   {
     id: "1236",
