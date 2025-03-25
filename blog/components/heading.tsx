@@ -3,6 +3,7 @@ import { ReactNode } from "react"
 
 
 interface headingProps {
+  id: string,
   children: ReactNode,
   type: string,
 }
@@ -16,6 +17,7 @@ const styling = {
 // className={cn(`${styling[type]}`)}>
 
 const Heading: React.FC<headingProps> = ({
+  id,
   children,
   type
 }) => {
@@ -24,7 +26,7 @@ const Heading: React.FC<headingProps> = ({
 
 
   return (
-    <div id='blogHeads' className={`${style}`}>
+    <div id={id} className={`${style}`}>
       {children}
     </div>
   )

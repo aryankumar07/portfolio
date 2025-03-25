@@ -4,6 +4,9 @@ import { useMaximumStore } from "../../store/useMaximumStore";
 import { cn } from '../../libs/utils';
 import { useEffect, useState } from "react";
 
+
+
+
 const BlogPopUp = () => {
   const maximum = useMaximumStore((state) => state.maximum);
   const isOpen = useBlogModel((state) => state.isOPen);
@@ -14,7 +17,7 @@ const BlogPopUp = () => {
 
   useEffect(() => {
     setIsParsing(true);
-    const headings = Array.from(document.querySelectorAll('#blogHeads'));
+    const headings = Array.from(document.querySelectorAll('[id*="blogHeads"]'));
 
     // Extract heading text safely
     const extractedHeadings = headings.map((heading) => {
@@ -37,7 +40,9 @@ const BlogPopUp = () => {
     // Set up IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle('show', entry.isIntersecting);
+        const index = entry.target.id.split('').pop()
+        const element = document.querySelector(`#content${index}`)
+        element?.classList.toggle('show', entry.isIntersecting)
       });
     }, { threshold: 1 });
 
@@ -50,7 +55,6 @@ const BlogPopUp = () => {
 
   const Body = (
     <div className="relative">
-      {/* Blog image */}
       <div>
         <img
           className={`w-full transition-all duration-300 ease-in-out rounded-t-md ${maximum ? 'h-auto' : 'h-64 object-cover'}`}
@@ -61,46 +65,8 @@ const BlogPopUp = () => {
 
       {/* Main content grid */}
       <div className={cn(`grid ${maximum ? 'grid-cols-6' : 'grid-cols-1'} gap-4`)}>
+
         {/* Left sidebar (only visible when maximized) */}
-        {maximum && (
-          <div className="col-span-1 p-4 sticky top-4 h-fit">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">Table of Contents</h3>
-              {isParsing ? (
-                <div className="text-gray-500 italic">Parsing headings...</div>
-              ) : blogHeadings.length > 0 ? (
-                <ul className="space-y-2">
-                  {blogHeadings.map((heading, index) => (
-                    <li key={index} className="hover:text-blue-600 transition-colors">
-                      <a
-                        href={`#heading-${index}`}
-                        className="text-sm line-clamp-1"
-                        title={heading}
-                      >
-                        {heading || `Section ${index + 1}`}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <div className="text-gray-500 italic">No headings found</div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Blog content */}
-        <div className={cn("col-span-4", !maximum && "col-span-full")}>
-          <div className="markdown-body p-4">
-            {blog?.body ? <blog.body /> : (
-              <div className="text-center py-8 text-gray-500">
-                Loading content...
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Right sidebar (only visible when maximized) */}
         {maximum && (
           <div className="col-span-1 p-4 sticky top-4 h-fit">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
@@ -114,6 +80,57 @@ const BlogPopUp = () => {
             </div>
           </div>
         )}
+
+
+        {/* Blog content */}
+        <div className={cn("col-span-4", !maximum && "col-span-full")}>
+          <div className="markdown-body p-4">
+            {blog?.body ? <blog.body /> : (
+              <div className="text-center py-8 text-gray-500">
+                Loading content...
+              </div>
+            )}
+          </div>
+        </div>
+
+
+        {/* Right sidebar (only visible when maximized) */}
+        {maximum && (
+          <div className="col-span-1 p-4 sticky top-4 h-fit">
+            <div className="">
+              <h1 className="font-semibold text-lg mb-3 text-foreground">In This Article</h1>
+              {isParsing ? (
+                <div className="text-gray-500 italic">Parsing headings...</div>
+              ) : blogHeadings.length > 0 ? (
+                <div className="flex justify-start items-start gap-3">
+                  {/* Vertical Line - Fixed Version */}
+                  <div
+                    className="border-l border-gray-300 h-full min-h-[200px]"
+                    style={{ height: `${blogHeadings.length * 28}px` }}
+                  ></div>
+                  <ul className="space-y-2">
+                    {blogHeadings.map((heading, index) => (
+                      <div id={`content${index}`} key={index} >
+                        <li className="">
+                          <a
+                            href={`#blogHeads${index}`}
+                            className="text-sm line-clamp-1 mb-5 text-foreground"
+                            title={heading}
+                          >
+                            {heading || `Section ${index + 1}`}
+                          </a>
+                        </li>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div className="text-gray-500 italic">No headings found</div>
+              )}
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
@@ -122,5 +139,6 @@ const BlogPopUp = () => {
     <Popup isOpen={isOpen} setClose={setClose} data={Body} window />
   );
 };
+
 
 export default BlogPopUp;
