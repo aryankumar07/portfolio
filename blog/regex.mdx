@@ -1,0 +1,137 @@
+import { Heading } from './components/heading'
+import {Span} from './components/span'
+import {Color} from './components/color'
+
+
+<Heading id='_' type='big'>
+    Re<Span color='#E34234' >g</Span>ex
+</Heading>
+
+
+<Heading id="blogHeads0" type='primary'>
+    What And Why <Span>?</Span> 
+</Heading>
+
+
+Regex stands for Regular Expression which as the name suggest just a regular more generalised formula for identify some expression.\
+eg. DateFormat like
+```
+\/d{2}-/d{2}-/d{4}\g
+```
+*Don't worry we will be going through this weird/scray looking expression explaning everything properly*
+
+
+is a generalised expression (Regex) for date format DD-MM-YYYY . which satisfies all dates like '12-9-2000' or '02-10-2020'
+
+It is mainly used for <Span>Matching</Span> , <Span>Searching</Span> and <Span>Manipulating</Span>
+
+
+<Heading id="blogHeads1" type='primary'>
+Syntax
+</Heading>
+
+lets go through the basics syntax
+> All the fancy expression comes between these backslashes '\\\\'\
+> At the end of the expression <Span>flags</Span> are specified (we will be going through these flags later)
+
+
+<Heading id="blogHeads2" type='primary'>
+  Basic Matchers
+</Heading>
+
+### Dot(.)
+```
+\.\g
+```
+
+this expression means that it will select every <Span>individual Character</Span> which includes the spaces\
+In the expression "A dummy expression !"
+> <Color>A</Color> <Color>.</Color> <Color>d</Color> <Color>u</Color> <Color>m</Color> <Color>m</Color> <Color>y</Color> <Color>.</Color> <Color>e</Color> <Color>x</Color> <Color>p</Color> <Color>r</Color> <Color>e</Color> <Color>s</Color> <Color>s</Color> <Color>i</Color> <Color>o</Color> <Color>n</Color> <Color>.</Color> <Color>!</Color>
+
+
+### Character Sets([])
+```
+\[re]\g
+```
+This expression means that it will select only the character within the brackets the order here doesnot matter because the characters are selected individually\
+<Color>These are Case Sensitive</Color>\
+In the expression "A dummy expression !"
+> A dummy <Color>a</Color>exp<Color>r</Color> <Color>e</Color>ssion
+
+#### <Span>Usage</Span>
+
+```
+\p[re]s\g
+```
+> this will not match anything because the [] donot actually group the characters but select individual charcter
+```
+\e[xs]\g
+```
+> a dummy <Color>ex</Color> pr <Color>es</Color> sion
+```
+\b[^eo]r\g
+```
+This regex means that all characters will be accepted except e and o\
+'bar baar bor bgr'
+> <Color>bar</Color> baar bor <Color>bgr</Color>
+```
+\[e-o]\g
+```
+"this is a dummy expression"
+This regex means all character between e and o in the english alphabets
+> t<Color>h</Color> <Color>i</Color> s <Color>i</Color> s a du<Color>m</Color> <Color>m</Color> y <Color>e</Color>xpr<Color>e</Color> ss<Color>i</Color><Color>o</Color><Color>n</Color>
+
+
+<Heading id="blogHeads3" type='primary'>
+      Repititions
+</Heading>
+
+Previously we had learned how to select individual characters now what if we had to look for multiple characters like 
+continues 'o' or 's' for this comes the special character '<Span>+</Span>', '<Span>*</Span>', \'<Span>?</Span>\'
+
+> plus      (+) -> Character can come atleast once\
+> asterick  (*) -> Character can come miltiple times or none\
+> question  (?) -> Character is Optional (Comes only once or none)
+
+#### <Span>Usage</Span>
+```
+\be+r\g
+```
+"ber br beer beeeer"
+> <Color>ber</Color> br <Color>beer</Color> <Color>beeeer</Color>
+
+```
+\be*r\g
+```
+> <Color>ber</Color> <Color>br</Color> <Color>beer</Color> <Color>beeeer</Color>
+```
+\colou?r\g
+```
+"color colour colouur"
+> <Color>color</Color> <Color>colour</Color> colouur
+
+#### Suppose if you want to have a character repitition a specific number of times then specify the number inside the {}
+```
+\opo{2}se\g
+```
+"opose opoose opse opooose"\
+\{n\} means that the character can come only n times
+> opose <Color>opoose</Color> opse opooose 
+
+```
+\opo{2,}se\g
+```
+"opose opoose opse opooose"\
+\{n,\} means that the character can come atleast n times
+> opose <Color>opoose</Color> opse <Color>opooose</Color> 
+
+```
+\opo{2,4}se\g
+```
+"opose opoose opse opooose opoooose opooooose"\
+\{n,m\} means that the character can come atleast n and at mac m times
+> opose <Color>opoose</Color> opse <Color>opooose</Color>  <Color>opoooose</Color> opooooose 
+
+
+
+

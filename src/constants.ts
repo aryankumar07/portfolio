@@ -1,6 +1,7 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
 import Example from '../blog/example.mdx'
 import Example2 from '../blog/example2.mdx'
+import Regex from '../blog/regex.mdx'
 import { ComponentType } from 'react';
 
 type FiltersMap = {
@@ -303,7 +304,7 @@ export const Blogs: Iblog[] = [
     id: "1236",
     title: 'Regex',
     image: 'regex.png',
-    body: Example
+    body: Regex
   }
 ]
 

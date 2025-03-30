@@ -10,11 +10,11 @@ interface headingProps {
 
 const styling = {
   primary: 'text-xl font-semibold',
-  highlighted: 'text-3xl font-bold'
+  highlighted: 'text-3xl font-bold',
+  big: 'text-3xl font-bold'
 }
 
 
-// className={cn(`${styling[type]}`)}>
 
 const Heading: React.FC<headingProps> = ({
   id,

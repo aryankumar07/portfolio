@@ -64,7 +64,7 @@ const Popup: React.FC<PopupProps> = ({
         {
           window && (
             <div className="group flex gap-1 justify-start items-center mt-1 ml-1">
-              <div className="flex items-center justify-center bg-red-600 rounded-full cursor-pointer w-4 h-4">
+              <div className="flex items-center justify-center bg-red-600 rounded-full cursor-pointer w-3 h-3">
                 <div className="hidden group-hover:block">
                   <X
                     size={12}
@@ -72,17 +72,17 @@ const Popup: React.FC<PopupProps> = ({
                   />
                 </div>
               </div>
-              <div className="flex items-center justify-center bg-yellow-500 rounded-full cursor-not-allowed w-4 h-4">
+              <div className="flex items-center justify-center bg-yellow-500 rounded-full cursor-not-allowed w-3 h-3">
                 <div className="hidden group-hover:block">
                   <Minus size={12} />
                 </div>
               </div>
-              <div className="flex items-center justify-center bg-green-500 rounded-full cursor-pointer w-4 h-4">
+              <div className="flex items-center justify-center bg-green-500 rounded-full cursor-pointer w-3 h-3">
                 <div
                   onClick={handelMaximize}
                   className="hidden group-hover:block">
                   <Maximize2
-                    size={12}
+                    size={8}
                   />
                 </div>
               </div>
