@@ -1,6 +1,7 @@
 import { Heading } from './components/heading'
 import {Span} from './components/span'
 import {Color} from './components/color'
+import {Explain} from './components/explain'
 
 
 <Heading id='_' type='big'>
@@ -16,7 +17,7 @@ import {Color} from './components/color'
 Regex stands for Regular Expression which as the name suggest just a regular more generalised formula for identify some expression.\
 eg. DateFormat like
 ```
-\/d{2}-/d{2}-/d{4}\g
+/\d{2}-\d{2}-\d{4}/g
 ```
 *Don't worry we will be going through this weird/scray looking expression explaning everything properly*
 
@@ -41,7 +42,7 @@ lets go through the basics syntax
 
 ### Dot(.)
 ```
-\.\g
+/./g
 ```
 
 this expression means that it will select every <Span>individual Character</Span> which includes the spaces\
@@ -51,7 +52,7 @@ In the expression "A dummy expression !"
 
 ### Character Sets([])
 ```
-\[re]\g
+/[re]/g
 ```
 This expression means that it will select only the character within the brackets the order here doesnot matter because the characters are selected individually\
 <Color>These are Case Sensitive</Color>\
@@ -61,21 +62,21 @@ In the expression "A dummy expression !"
 #### <Span>Usage</Span>
 
 ```
-\p[re]s\g
+/p[re]s/g
 ```
 > this will not match anything because the [] donot actually group the characters but select individual charcter
 ```
-\e[xs]\g
+/e[xs]/g
 ```
 > a dummy <Color>ex</Color> pr <Color>es</Color> sion
 ```
-\b[^eo]r\g
+/b[^eo]r/g
 ```
 This regex means that all characters will be accepted except e and o\
 'bar baar bor bgr'
 > <Color>bar</Color> baar bor <Color>bgr</Color>
 ```
-\[e-o]\g
+/[e-o]/g
 ```
 "this is a dummy expression"
 This regex means all character between e and o in the english alphabets
@@ -95,43 +96,185 @@ continues 'o' or 's' for this comes the special character '<Span>+</Span>', '<Sp
 
 #### <Span>Usage</Span>
 ```
-\be+r\g
+/be+r/g
 ```
 "ber br beer beeeer"
 > <Color>ber</Color> br <Color>beer</Color> <Color>beeeer</Color>
 
 ```
-\be*r\g
+/be*r/g
 ```
 > <Color>ber</Color> <Color>br</Color> <Color>beer</Color> <Color>beeeer</Color>
 ```
-\colou?r\g
+/colou?r/g
 ```
 "color colour colouur"
 > <Color>color</Color> <Color>colour</Color> colouur
 
 #### Suppose if you want to have a character repitition a specific number of times then specify the number inside the {}
 ```
-\opo{2}se\g
+/opo{2}se/g
 ```
 "opose opoose opse opooose"\
 \{n\} means that the character can come only n times
 > opose <Color>opoose</Color> opse opooose 
 
 ```
-\opo{2,}se\g
+/opo{2,}se/g
 ```
 "opose opoose opse opooose"\
 \{n,\} means that the character can come atleast n times
 > opose <Color>opoose</Color> opse <Color>opooose</Color> 
 
 ```
-\opo{2,4}se\g
+/opo{2,4}se/g
 ```
 "opose opoose opse opooose opoooose opooooose"\
 \{n,m\} means that the character can come atleast n and at mac m times
 > opose <Color>opoose</Color> opse <Color>opooose</Color>  <Color>opoooose</Color> opooooose 
 
 
+#### Some more Character class
+- \w -> selects a single english alphabets
+- \W -> Not a word
+- \d -> selects only digits
+- \D -> selects that are not digits
+- \s -> selects a whitespace
+- \S -> selects a not whitespace
+- \b -> tells about the start and end of a word
 
 
+<Heading id="blogHeads4" type='primary'>
+Grouping
+</Heading>
+
+Cool till now we have learned how to select character multiple times though take care that till now you could at max select same
+character so what if you want to select multiple different character well look no further you can do using parantheis -> ()
+
+for example you want to find a group of repititing "ha" in 
+> haha h ha hahahaa
+```
+ /(ha)+/g
+```
+> <Color>haha</Color> h <Color>ha</Color> <Color>hahaha</Color> a
+
+Another great feature that grouping does is that an automatic reference is set to the groups so that the reference can be called whenever we want
+
+for example we want to select a group of words that repeats in a continiuity
+
+> hello hello world world world there
+```
+/(\w+)\s+\1/g
+```
+> <Color>hello hello</Color> <Color>world world</Color> world there
+
+<Explain>
+(\w+) -> this select the word as a whole (there will be atleast one word)
+
+\s -> this looks for a backspace (atleast one)
+
+\1 -> this reference the first group  that was made which reference to (\w+)
+
+also note that the last two world could also be selected This happens because regex engines consume characters after a match, 
+so after matching the first world world, the remaining string is " world there", and "world there" doesn’t match (\w+)\s+\1.
+</Explain>
+
+<Span>Usage</Span>
+
+lets take a tricky example lets looks for palindromes 
+
+> abba level radar test
+
+```
+/\b(\w)(\w)\2\1\b/g
+```
+> <Color>abba</Color> level radar test
+
+<Explain>
+\b -> means that the word should be started with a letter instead starting in between words
+
+(\w) -> select a single character gets a reference 1
+
+(\w) -> select a single character but this time gets a reference of 2
+
+\2 -> repeat the second reference
+
+\1 -> repeat the first reference
+
+\b -> the word ends here
+
+
+Note :- level and radar are also palindromes but not selected
+</Explain>
+
+#### Non-capturing Groups
+
+
+Now suppose if you donot want to include the group into a reference then regex provides a method for that too they are called
+Non-capturing groups and this is the synatx for it
+```
+(?:<regex>)
+```
+supoose we want to look for a number
+> 123-234-3456
+```
+/(?:\d{3}-){2}-\d{4}/g
+```
+> <Color>123-234-3456</Color>
+
+Note :- we didnot use a capturing group because if we used then the same group that was captured had to written again 
+
+<Heading id="blogHeads5" type='primary'>
+LookArounds
+</Heading>
+
+Lookarounds are zero-width assertions that check if a pattern exists ahead (lookahead) or behind (lookbehind) the current 
+position without consuming characters. They allow you to enforce conditions without including them in the match.
+
+there are 4 types of LookArounds
+- `(?=....)` - positive lookahead
+- `(?!....)` - negative lookahead
+- `(?<=....)` - positive lookbehind
+- `(?<!....)` - negative lookbehind
+
+<Span>Usage</Span>
+
+#### Positive LookAhead
+> 1st 2nd 3pc
+```
+/\d(?=nd)/g
+```
+> 1st <Color>2</Color> nd 3pc
+
+#### Negative LookAhead
+> 1st 2nd 3pc
+```
+/\d(?!nd)/g
+```
+> <Color>1</Color> st 2nd <Color>3</Color> pc
+
+#### Positive LookBehind
+> #1 $2 %3
+```
+/(?<=%)\d/g
+```
+> #1 $2 % <Color>3</Color>
+
+#### Negative LookBehind
+> #1 $2 %3
+```
+/(?<!%)\d/g
+```
+> \# <Color>1</Color> $ <Color>2</Color> %3
+
+<Heading id="blogHeads6" type='primary'>
+Flags
+</Heading>
+
+The basics are covered till now lets learn about the flags this time
+
+- i -> as regex is case sensitive by specifying the i flag it becames case-insensitive
+- g -> this ensure that the regex engine does not stop at the first occurence
+- m -> If not enabled, line start and end equals the beginning and end of the entire string. It doesn't work for each row individually.
+
+Note :- this Flags can be appended on to each other
