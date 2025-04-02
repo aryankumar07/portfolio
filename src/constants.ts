@@ -1,6 +1,4 @@
 import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, LucideIcon, Gamepad, TabletSmartphone, Code, BrainCog } from 'lucide-react'
-import Example from '../blog/example.mdx'
-import Example2 from '../blog/example2.mdx'
 import Regex from '../blog/regex.mdx'
 import { ComponentType } from 'react';
 
