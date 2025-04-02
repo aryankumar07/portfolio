@@ -292,18 +292,6 @@ export const Blogs: Iblog[] = [
     id: "1234",
     title: 'Regex',
     image: 'regex.png',
-    body: Example
-  },
-  {
-    id: "1235",
-    title: 'Regex',
-    image: 'regex.png',
-    body: Example2
-  },
-  {
-    id: "1236",
-    title: 'Regex',
-    image: 'regex.png',
     body: Regex
   }
 ]

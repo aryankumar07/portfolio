@@ -3,6 +3,9 @@ import Popup from "./Popup";
 import { useMaximumStore } from "../../store/useMaximumStore";
 import { cn } from '../../libs/utils';
 import { useEffect, useState } from "react";
+import supabase from "../../libs/supabase";
+import { HeartIcon } from "lucide-react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 
 
@@ -14,6 +17,47 @@ const BlogPopUp = () => {
   const blog = useBlogModel((state) => state.blog);
   const [blogHeadings, setBlogHeadings] = useState<string[]>([]);
   const [isParsing, setIsParsing] = useState(true);
+  const [Likes, setLikes] = useState(0)
+  const [liked, setLiked] = useLocalStorage('liked', false)
+
+
+
+  const handleLike = async () => {
+    try {
+      const newLikeCount = liked ? Likes - 1 : Likes + 1;
+
+      setLikes(newLikeCount);
+      setLiked(!liked);
+
+      const { error } = await supabase
+        .from('Blog_info')
+        .update({ likes: newLikeCount })
+        .eq('id', blog!.id);
+
+      if (error) {
+        throw error;
+      }
+
+    } catch (error) {
+      setLikes(Likes);
+      setLiked(!liked);
+      console.error('Error updating likes:', error);
+      alert('Failed to update likes. Please try again.');
+    }
+  };
+
+
+  useEffect(() => {
+    async function getLikes() {
+      if (blog) {
+        const { data: likes } = await supabase.from('Blog_info').select('likes').eq('id', blog?.id)
+        if (likes) {
+          setLikes(likes[0].likes)
+        }
+      }
+    }
+    getLikes()
+  }, [blog])
 
   useEffect(() => {
     setIsParsing(true);
@@ -68,15 +112,16 @@ const BlogPopUp = () => {
 
         {/* Left sidebar (only visible when maximized) */}
         {maximum && (
-          <div className="col-span-1 p-4 sticky top-4 h-fit">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">Actions</h3>
-              <button className="w-full bg-blue-100 hover:bg-blue-200 text-blue-800 py-2 px-4 rounded mb-2 transition-colors">
-                Like
-              </button>
-              <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded transition-colors">
-                Bookmark
-              </button>
+          <div className="hidden md:block">
+            <div className="col-span-1 p-4 sticky top-4 h-fit">
+              <div className="flex justify-center items-center gap-3">
+                <HeartIcon
+                  fill={liked ? 'red' : 'white'}
+                  onClick={handleLike}
+                  className="cursor-pointer"
+                  size={40} />
+                <div className="text-lg font-semibold text-foreground">{Likes}</div>
+              </div>
             </div>
           </div>
         )}
@@ -104,11 +149,7 @@ const BlogPopUp = () => {
               ) : blogHeadings.length > 0 ? (
                 <div className="flex justify-start items-start gap-3">
                   {/* Vertical Line - Fixed Version */}
-                  <div
-                    className="border-l border-gray-300 h-full min-h-[200px]"
-                    style={{ height: `${blogHeadings.length * 28}px` }}
-                  ></div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 border border-l-2 border-t-0 border-r-0 border-b-0 px-6 ">
                     {blogHeadings.map((heading, index) => (
                       <div id={`content${index}`} key={index} >
                         <li className="">
