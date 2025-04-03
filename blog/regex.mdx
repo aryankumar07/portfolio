@@ -32,7 +32,7 @@ Syntax
 </Heading>
 
 lets go through the basics syntax
-> All the fancy expression comes between these backslashes '\\\\'\
+> All the fancy expression comes between these backslashes '//'\
 > At the end of the expression <Span>flags</Span> are specified (we will be going through these flags later)
 
 
@@ -111,7 +111,7 @@ continues 'o' or 's' for this comes the special character '<Span>+</Span>', '<Sp
 "color colour colouur"
 > <Color>color</Color> <Color>colour</Color> colouur
 
-#### Suppose if you want to have a character repitition a specific number of times then specify the number inside the {}
+#### Suppose if you want to have a character repitition a specific number of times then specify the number inside the \{\}
 ```
 /opo{2}se/g
 ```
@@ -130,7 +130,7 @@ continues 'o' or 's' for this comes the special character '<Span>+</Span>', '<Sp
 /opo{2,4}se/g
 ```
 "opose opoose opse opooose opoooose opooooose"\
-\{n,m\} means that the character can come atleast n and at mac m times
+\{n,m\} means that the character can come atleast n and at max m times
 > opose <Color>opoose</Color> opse <Color>opooose</Color>  <Color>opoooose</Color> opooooose 
 
 

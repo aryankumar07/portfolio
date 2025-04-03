@@ -2,6 +2,8 @@ import { MailCheck, PhoneCall, Cake, MapPinHouse, Twitter, Github, Linkedin, Luc
 import Regex from '../blog/regex.mdx'
 import { ComponentType } from 'react';
 
+
+
 type FiltersMap = {
   [key: string]: string; // Index signature
 };

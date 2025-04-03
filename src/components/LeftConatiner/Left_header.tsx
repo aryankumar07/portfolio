@@ -7,7 +7,7 @@ const Leftheader = () => {
       <div className="flex justify-center rounded-2xl overflow-hidden shadow-md">
         <div className={`size-28 min-[400px]:size-36`}>
           <img
-            src={"/image_header.jpg"}
+            src={"/personal_logo.gif"}
             alt="Placeholder"
             className="cursor-pointer w-full h-full object-cover"
           />
