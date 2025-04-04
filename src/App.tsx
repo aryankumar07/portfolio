@@ -4,8 +4,14 @@ import GamePopUp from "./components/PopUpContainer/GamePopUp"
 import ProjectPopup from "./components/PopUpContainer/ProjectPopup"
 import RightContainer from "./components/RightContainer/RightBody"
 import { cn } from "./libs/utils"
+import ReactGA from 'react-ga4'
+import { useEffect } from "react"
 
 const App = () => {
+  useEffect(() => {
+    ReactGA.initialize(import.meta.env.VITE_GOOGLE_TRACKINGID);
+    ReactGA.send({ hitType: "pageview", page: "/landingpage", title: "Landing Page" });
+  }, [])
   return (
     <div className={cn(
       'relative',
